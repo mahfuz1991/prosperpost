@@ -21,10 +21,10 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: a
-github_username:  a
+twitter_username: https://www.twitter.com
+github_username:  https://www.github.com
 facebook_username: https://www.facebook.com
-instagram_username: a
+instagram_username: https://www.instagram.com
 email-address: anthony@prosperpost.com
 
 # Build settings
