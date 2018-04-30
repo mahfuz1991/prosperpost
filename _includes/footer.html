@@ -8,7 +8,7 @@
                 <h5 class="mb-1">Join our Community!</h5>
             </li>
             <li class="list-inline-item">
-                <a href="#!" class="btn btn-light btn-rounded text-danger">Sign up!</a>
+                <a data-target="#joinCommunityModal" class="btn btn-light btn-rounded text-danger" data-toggle="modal">Sign up!</a>
             </li>
         </ul>
     </div>
@@ -146,6 +146,11 @@
       © 2018 Copyright: MDBootstrap.com
   </div>
   /.Copyright-->
+
+    <!--Forms-->
+    {% include join-community-form.html %}
+    {% include contact-us-form.html %}
+    <!--/forms-->
 
 </footer>
 <!--/.Footer-->

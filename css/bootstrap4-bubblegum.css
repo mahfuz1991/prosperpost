@@ -4744,7 +4744,8 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.5; }
+  line-height: 1.5; 
+  color: var(--dark);}
 
 .modal-body {
   position: relative;
@@ -4752,7 +4753,8 @@ button.close {
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 1rem; }
+  padding: 1rem;
+  color: var(--dark); }
 
 .modal-footer {
   display: -webkit-box;
@@ -7883,6 +7885,14 @@ a.text-dark:hover, a.text-dark:focus {
 .rgba-white-slight {
   background-color: rgba(255,255,255,.1);
 }
+
+/*join community modal css */
+
+
+
+/*end join community modal css */
+
+
 
 /*slider css */
 
