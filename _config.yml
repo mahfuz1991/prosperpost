@@ -26,6 +26,9 @@ github_username:  https://www.github.com
 facebook_username: https://www.facebook.com
 instagram_username: https://www.instagram.com
 email-address: anthony@prosperpost.com
+collections:
+  theaters:
+  dentists:  
 
 # Build settings
 markdown: kramdown

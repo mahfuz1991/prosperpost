@@ -2,13 +2,33 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Prosper Post: Events, Businesses & Life in Prosper, TX</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    {% assign pagecontent_description = page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 160 %}
+    <meta name="description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}">
+    
+     <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="{{ page.title }}"/>
+    {% if page.image %}<meta property="og:image" content="{{ site.url }}{{ page.image }}"/>{% endif %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}"/>
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter_url }}">
+    <meta name="twitter:title" content="{{ page.title }}" />
+    {% if page.image %}<meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />{% endif %}
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="twitter:description" content="{% if pagecontent_description.size > 10 %}{{ pagecontent_description }}{% else %}{{ site.description }}{% endif %}" />
+  
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 
   
 <link href="https://fonts.googleapis.com/css?family=Chicle|Open+Sans" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap4-bubblegum.css">
+<link rel="stylesheet" href="/css/bootstrap4-bubblegum.css">
 
 </head>
